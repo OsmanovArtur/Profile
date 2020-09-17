@@ -1,0 +1,53 @@
+.CardListItem {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(174, 180, 170);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.CardListItem img {
+  border-radius: 100px;
+  border: 2px solid #fff;
+  text-align: center;
+  width: 289px;
+  height: 255px;
+}
+.CardListItem .content {
+  position: relative;
+  width: 400px;
+  height: 800px;
+  margin: 0 auto;
+  padding-top: 20px;
+  background: linear-gradient(to bottom left, #333300 -5%, #ffffff 100%);
+  text-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 0;
+}
+
+.CardListItem .content:hover {
+  background: rgb(102, 114, 113);
+}
+.CardListItem .horisontLine {
+  color: #ffffff;
+}
+.CardListItem .headerInfo {
+  text-align: center;
+  font-family: Snell Roundhand, cursive;
+  color: #fff;
+}
+.CardListItem .deskriptionInfo {
+  text-align: center;
+  font-family: Comic Sans MS, Comic Sans, cursive;
+}
+.CardListItem .imageContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  margin-bottom: 60px;
+}
+.CardListItem a {
+  text-decoration: none;
+}
