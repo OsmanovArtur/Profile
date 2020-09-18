@@ -1,17 +1,17 @@
 import React from "react";
 import "./App.css";
 import CardList from "./Container/CardList/CardList";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import CardListItem from "./Container/CardListItem/CardListItem";
-import Button from "./Components/Button/Button";
 
 function App() {
   return (
     <div className="App">
       <Switch>
         <Route path="/CardListItem/:id" component={CardListItem}></Route>
-        <Route path="/" component={CardList}></Route>
-        <Route path="/button/" component={Button} />
+        <Route path="/" exact component={CardList}></Route>
+
+        <Redirect to={"/"} />
       </Switch>
     </div>
   );

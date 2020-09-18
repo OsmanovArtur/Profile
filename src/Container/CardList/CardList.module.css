@@ -1,13 +1,10 @@
-.CardList {
-}
-
-.CardList .textInfo {
+.CardList .TextInfo {
   font-family: serif;
   color: black;
   font-size: 180%;
 }
 
-.CardList .container {
+.CardList .Container {
   width: 220px;
   height: 321px;
   background: #fff;
@@ -20,7 +17,7 @@
   transition: all 0.3s ease-out;
 }
 
-.CardList .container:hover {
+.CardList .Container:hover {
   background: #add8e6;
   transform: translateY(-5px) scale(1.005);
 }

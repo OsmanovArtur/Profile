@@ -4,13 +4,17 @@ import profile from "../../Components/Constant/Constant";
 import { Link } from "react-router-dom";
 
 const CardList = () => {
-  const info = profile.info;
-  return info.map((item) => {
+  const { info } = profile;
+  return info.map((item, index) => {
     return (
       <div className={classes.CardList}>
-        <div className={classes.container}>
-          <Link to={"/CardListItem/" + item.id} className={classes.Link}>
-            <h3 className={classes.textInfo}>
+        <div className={classes.Container}>
+          <Link
+            to={`/CardListItem/${item.id}`}
+            className={classes.Link}
+            key={index}
+          >
+            <h3 className={classes.TextInfo}>
               {item.name} {item.sername}
             </h3>
           </Link>
