@@ -7,4 +7,9 @@
   align-items: center;
   flex-wrap: wrap;
   font-family: "Open Sans";
+  overflow: scroll;
+}
+
+.App .a {
+  text-decoration: none;
 }

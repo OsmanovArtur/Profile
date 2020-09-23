@@ -7,14 +7,14 @@
   flex-direction: column;
 }
 
-.CardListItem .image {
+.Image {
   border-radius: 100px;
   border: 2px solid #fff;
   text-align: center;
   width: 289px;
   height: 255px;
 }
-.CardListItem .content {
+.Content {
   position: relative;
   width: 400px;
   height: 800px;
@@ -27,22 +27,22 @@
   box-shadow: 0 0;
 }
 
-.CardListItem .content:hover {
+.Content:hover {
   background: rgb(102, 114, 113);
 }
 
-.CardListItem .headerInfo {
+.HeaderInfo {
   text-align: center;
   font-family: Snell Roundhand, cursive;
   color: #fff;
   border-bottom: 2px solid #ffffff;
   padding-bottom: 7px;
 }
-.CardListItem .deskriptionInfo {
+.DeskriptionInfo {
   text-align: center;
   font-family: Comic Sans MS, Comic Sans, cursive;
 }
-.CardListItem .imageContainer {
+.ImageContainer {
   display: flex;
   justify-content: center;
   margin-top: 80px;
@@ -51,14 +51,14 @@
 .CardListItem a {
   text-decoration: none;
 }
-.CardListItem .ButtonArea {
+.ButtonArea {
   width: 400px;
   text-align: center;
   background: rgb(102, 114, 113);
   height: 40px;
   border-radius: 0;
 }
-.CardListItem .Button {
+.Button {
   position: relative;
   color: white;
   font-weight: bold;
@@ -93,7 +93,72 @@
   transition: 0.5s linear;
   background-position: -200% 0, 0 0;
 }
-.CardListItem .erorr {
+.Erorr {
   text-align: center;
   color: brown;
+}
+
+.BtnArea {
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+  padding-bottom: 4px;
+}
+.BtnNewFamilyMember {
+  width: 200px;
+  position: relative;
+  display: inline-block;
+  color: #777674;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: rgba(255, 255, 255, 0.5) 1px 1px,
+    rgba(100, 100, 100, 0.3) 3px 7px 3px;
+  user-select: none;
+  padding: 1em 2em;
+  outline: none;
+  border-radius: 3px / 100%;
+  background-image: linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%
+    ),
+    linear-gradient(
+      to right,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0) 20%,
+      rgba(255, 255, 255, 0) 90%,
+      rgba(255, 255, 255, 0.3)
+    ),
+    linear-gradient(
+      to right,
+      rgba(125, 125, 125, 1),
+      rgba(255, 255, 255, 0.9) 45%,
+      rgba(125, 125, 125, 0.5)
+    ),
+    linear-gradient(
+      to right,
+      rgba(125, 125, 125, 1),
+      rgba(255, 255, 255, 0.9) 45%,
+      rgba(125, 125, 125, 0.5)
+    ),
+    linear-gradient(
+      to right,
+      rgba(223, 190, 170, 1),
+      rgba(255, 255, 255, 0.9) 45%,
+      rgba(223, 190, 170, 0.5)
+    ),
+    linear-gradient(
+      to right,
+      rgba(223, 190, 170, 1),
+      rgba(255, 255, 255, 0.9) 45%,
+      rgba(223, 190, 170, 0.5)
+    );
+  background-repeat: no-repeat;
+  background-size: 200% 100%, auto, 100% 2px, 100% 2px, 100% 1px, 100% 1px;
+  background-position: 200% 0, 0 0, 0 0, 0 100%, 0 4px, 0 calc(100% - 4px);
+  box-shadow: rgba(0, 0, 0, 0.5) 3px 10px 10px -10px;
+}
+.BtnNewFamilyMember :active {
+  top: 1px;
 }

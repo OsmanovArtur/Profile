@@ -2,14 +2,18 @@ import React from "react";
 import classes from "../CardListItem/CardListItem.module.css";
 import profile from "../../Components/Constant/Constant";
 
-import { Link, Route } from "react-router-dom";
+import { Link, Route, withRouter } from "react-router-dom";
 
-const CardListItem = ({ match }) => {
+const CardListItem = ({ infoProfile, match }) => {
   const { info } = profile;
 
-  const renderInfo = info.find((item) => {
+  const fullFamilly = [...info, ...infoProfile];
+
+  const renderInfo = fullFamilly.find((item) => {
+    debugger;
     return item.id === match.params.id ? item : false;
   });
+
   const backToHomePage = () => {
     return <Route path="/"></Route>;
   };
@@ -17,22 +21,22 @@ const CardListItem = ({ match }) => {
   return (
     <div className={classes.CardListItem}>
       {renderInfo === undefined ? (
-        <h1 className={classes.erorr}>User not found</h1>
+        <h1 className={classes.Erorr}>User not found</h1>
       ) : (
-        <div className={classes.content}>
-          <a href={renderInfo.href}>
+        <div className={classes.Content}>
+          <a href={renderInfo.url}>
             {" "}
-            <h1 className={classes.headerInfo}>
+            <h1 className={classes.HeaderInfo}>
               {renderInfo.name + " " + renderInfo.sername}
             </h1>
           </a>
 
-          <h3 className={classes.deskriptionInfo}>{renderInfo.deskription}</h3>
-          <div className={classes.imageContainer}>
+          <h3 className={classes.DeskriptionInfo}>{renderInfo.deskription}</h3>
+          <div className={classes.ImageContainer}>
             <img
-              src={renderInfo.url}
+              src={renderInfo.href}
               alt={renderInfo.alt}
-              className={classes.image}
+              className={classes.Image}
             />
           </div>
 
@@ -50,8 +54,13 @@ const CardListItem = ({ match }) => {
           </div>
         </div>
       )}
+      <Link to="/NewFamilyMember">
+        <div className={classes.BtnArea}>
+          <button className={classes.BtnNewFamilyMember}>New</button>
+        </div>
+      </Link>
     </div>
   );
 };
 
-export default CardListItem;
+export default withRouter(CardListItem);
