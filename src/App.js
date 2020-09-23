@@ -11,8 +11,7 @@ class App extends Component {
     name: "",
     sername: "",
     info: [],
-    newArr: "",
-    deskription: " ",
+    deskription: "",
     href: "",
     url: "",
     isValid: false,
@@ -84,6 +83,12 @@ class App extends Component {
     });
     this.setState({
       info: newArr,
+      isValid: false,
+      name: "",
+      sername: "",
+      deskription: "",
+      href: "",
+      url: "",
     });
   };
   render() {

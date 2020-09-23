@@ -10,7 +10,6 @@ const CardListItem = ({ infoProfile, match }) => {
   const fullFamilly = [...info, ...infoProfile];
 
   const renderInfo = fullFamilly.find((item) => {
-    debugger;
     return item.id === match.params.id ? item : false;
   });
 
