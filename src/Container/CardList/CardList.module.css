@@ -2,11 +2,6 @@
   display: flex;
 }
 
-.CardList {
-  display: flex;
-  justify-content: center;
-}
-
 .TextInfo {
   font-family: serif;
   color: black;
@@ -20,23 +15,20 @@
   background: #fff;
   border-top-right-radius: 10px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
   transition: all 0.3s ease-out;
 }
 
-.CardList .Container:hover {
+.Container:hover {
   background: #add8e6;
   transform: translateY(-5px) scale(1.005);
 }
-.CardList .Link {
+.Link {
   text-decoration: none;
 }
 
-.BtnArea {
-}
 .Btn {
   position: relative;
   display: inline-block;

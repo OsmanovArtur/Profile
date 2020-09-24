@@ -10,6 +10,7 @@ const NewFamilyMember = ({
   onChangeSername,
   pasteHref,
   pasteUrl,
+  onClickBack,
 }) => {
   return (
     <div className={classes.Container}>
@@ -38,7 +39,9 @@ const NewFamilyMember = ({
           Добавить
         </button>
         <Link to="/">
-          <button className={classes.Button}>Назад</button>
+          <button className={classes.Button} onClick={onClickBack}>
+            Назад
+          </button>
         </Link>
       </div>
     </div>

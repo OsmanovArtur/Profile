@@ -91,6 +91,18 @@ class App extends Component {
       url: "",
     });
   };
+
+  onClickBack = () => {
+    this.setState({
+      name: "",
+      sername: "",
+      info: [],
+      deskription: "",
+      href: "",
+      url: "",
+      isValid: false,
+    });
+  };
   render() {
     return (
       <div className={classes.App}>
@@ -116,6 +128,7 @@ class App extends Component {
                 pasteUrl={this.pasteUrl}
                 isValid={this.state.isValid}
                 onclickBtn={() => this.onclickBtn(props.history)}
+                onClickBack={this.onClickBack}
               />
             )}
           />

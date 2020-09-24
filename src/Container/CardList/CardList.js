@@ -12,7 +12,7 @@ const CardList = ({ infoProfile }) => {
       <div className={classes.Major}>
         {fullFamilly.map((item, index) => {
           return (
-            <div className={classes.CardList} key={index}>
+            <div className key={index}>
               <div className={classes.Container}>
                 <Link to={`/CardListItem/${item.id}`} className={classes.Link}>
                   <h3 className={classes.TextInfo}>
